@@ -15,7 +15,7 @@ export abstract class UserRepository
     FindOne<User, 'id', User>,
     FindAll<User>
 {
-  abstract createOne(input: User): Promise<User>;
+  abstract  createOne(input: User)/* : Promise<User> */;
   abstract updateOne(id: string, input: User): Promise<User>;
   abstract removeOne(id: string): Promise<User>;
   abstract findOne(id: string): Promise<User>;

@@ -8,10 +8,21 @@ import {
   FindOne,
 } from '../base/repository';
 import { User } from '../users/interfaces/user';
+import { Knex } from 'knex';
+import { InjectModel } from 'nest-knexjs';
+
 
 export class UserRepositoryImpl implements UserRepository {
-  createOne(input: User): Promise<User> {
-    return Promise.resolve(undefined);
+  constructor(@InjectModel() private readonly knex: Knex) {}
+
+  async createOne(input: User)/* : Promise<User> */ {
+    const user = await this.knex.table('users').insert({
+      id: input.id,
+      name: input.name,
+      email: input.email,
+      password: input.password,
+    });
+    return user
   }
   updateOne(id: string, input: User): Promise<User> {
     return Promise.resolve(undefined);
@@ -23,6 +34,7 @@ export class UserRepositoryImpl implements UserRepository {
     return Promise.resolve(undefined);
   }
   findAll(): Promise<User[]> {
-    return Promise.resolve(undefined);
+    const users = this.knex.table('users')
+    return users
   }
 }
