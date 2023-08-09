@@ -8,7 +8,7 @@ import { UseCase } from '@app/domain/base/use-case';
 export class CreateUserService implements UseCase<CreateUserDto, User> {
     constructor(private readonly userRepository: UserRepository) {}
     
-    async execute(input: CreateUserDto)/* : Promise<User> */ {
+    async execute(input: CreateUserDto) : Promise<User>  {
         console.log('CreateUserService.execute()');
         return this.userRepository.createOne(input);
     }

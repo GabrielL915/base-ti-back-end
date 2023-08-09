@@ -5,6 +5,7 @@ import { CreateUserService } from './services/create-user';
 import { FindAllUserService } from './services/findAll-user';
 import { UserRepository } from '@app/domain/repository/user.repository';
 import { UserRepositoryImpl } from '@app/domain/repository/user.repository.impl';
+import { UpdateUserService } from './services/update-user';
 
 @Module({
   imports: [],
@@ -12,6 +13,7 @@ import { UserRepositoryImpl } from '@app/domain/repository/user.repository.impl'
   providers: [
     CreateUserService,
     FindAllUserService,
+    UpdateUserService,
     {
       provide: UserRepository,
       useClass: UserRepositoryImpl,

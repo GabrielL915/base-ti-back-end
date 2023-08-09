@@ -5,7 +5,8 @@ import {
   FindOne,
   FindAll,
 } from '../base/repository';
-import { User } from '../users/interfaces/user';
+//import { User } from '../users/interfaces/user';
+import { User } from '../users/entities/user.entity';
 
 export abstract class UserRepository
   implements
@@ -15,7 +16,7 @@ export abstract class UserRepository
     FindOne<User, 'id', User>,
     FindAll<User>
 {
-  abstract  createOne(input: User)/* : Promise<User> */;
+  abstract createOne(input: User) : Promise<User> ;
   abstract updateOne(id: string, input: User): Promise<User>;
   abstract removeOne(id: string): Promise<User>;
   abstract findOne(id: string): Promise<User>;
