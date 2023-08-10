@@ -1,0 +1,26 @@
+├── libs
+|  └── server
+|     ├── src
+|     |  ├── base
+|     |  |  ├── repository.ts
+|     |  |  └── use-case.ts
+|     |  ├── index.ts
+|     |  ├── repository
+|     |  |  ├── user.repository.impl.ts
+|     |  |  └── user.repository.ts
+|     |  └── users
+|     |     ├── dto
+|     |     |  ├── create-user.dto.ts
+|     |     |  └── update-user.dto.ts
+|     |     ├── entities
+|     |     |  └── user.entity.ts
+|     |     ├── use-cases
+|     |     |  ├── create-user.ts
+|     |     |  ├── findAll-user.ts
+|     |     |  └── update-user.ts
+|     |     ├── users.controller.ts
+|     |     └── users.module.ts
+|     └── tsconfig.lib.json
+├── src
+|  ├── app.module.ts
+|  └── main.ts
