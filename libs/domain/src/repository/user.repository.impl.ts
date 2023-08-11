@@ -41,7 +41,7 @@ export class UserRepositoryImpl implements UserRepository {
     return Promise.resolve(undefined);
   }
   findAll(): Promise<User[]> {
-    const users = this.knex.table('users');
+    const users = this.knex.table('entregador');
     return users;
   }
 }
