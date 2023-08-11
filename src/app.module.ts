@@ -39,12 +39,12 @@ import { KnexModule } from 'nest-knexjs';
         useNullAsDefault: true,
         connection: {
           connectionString:
-            'postgresql://postgres:65tl3WjVUbNjvl9d8tUh@containers-us-west-72.railway.app:6418/railway',
-          host: 'containers-us-west-72.railway.app',
+            '',
+          host: '',
           port: 6418,
-          user: 'postgres',
-          database: 'railway',
-          password: '65tl3WjVUbNjvl9d8tUh',
+          user: '',
+          database: '',
+          password: '',
         },
       },
     }),
