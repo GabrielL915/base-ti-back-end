@@ -4,11 +4,13 @@
 |     |  ├── base
 |     |  |  ├── repository.ts
 |     |  |  └── use-case.ts
-|     |  ├── index.ts
-|     |  ├── repository
-|     |  |  ├── user.repository.impl.ts
-|     |  |  └── user.repository.ts
+|     |  ├── infraestructure
+|     |  |  ├── migrations
+|     |  |  |  └── 1628796360680-CreateUserTable.js
 |     |  └── users
+|     |     ├── repository
+|     |     |  ├── user.repository.impl.ts
+|     |     |  └── user.repository.ts
 |     |     ├── dto
 |     |     |  ├── create-user.dto.ts
 |     |     |  └── update-user.dto.ts

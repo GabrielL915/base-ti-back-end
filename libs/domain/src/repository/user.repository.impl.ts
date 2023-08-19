@@ -16,17 +16,17 @@ export class UserRepositoryImpl implements UserRepository {
 
   async createOne(input: User): Promise<User> {
     const [user] = await this.knex
-      .table('users')
+      .table('entregador')
       .insert({
-        id: input.id,
-        name: input.name,
-        email: input.email,
-        password: input.password,
+       // id: input.id,
+        nome: input.nome,
+        cpf: input.cpf,
+        telefone: input.telefone,
       })
       .returning('*');
     return user;
   }
-  async updateOne(id: string, input: User): Promise<User> {
+  async updateOne(id: string, input): Promise<User> {
    const [user] = await this.knex.table('users').where({ id }).update({
       name: input.name,
       email: input.email,

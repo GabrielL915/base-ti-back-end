@@ -5,24 +5,24 @@
  */
 module.exports = {
   development: {
-    /* client: 'postgresql',
+    client: 'postgresql',
     connection: {
       host: 'localhost',
       port: 5432,
       user: 'pguser',
       password: 'pgpassword',
       database: 'nestjs',
-    }, */
-    client: 'pg',
-    useNullAsDefault: true,
-    connection: {
-      connectionString:
-        '',
-      host: '',
-      port: 6418,
-      user: '',
-      database: '',
-      password: '',
+      /* connection: {
+        connectionString:
+          '',
+        ssl: { rejectUnauthorized: false },
+        host: '',
+        port: 5432,
+        user: '',
+        database: '',
+        password:
+          '',
+      }, */
     },
   },
 

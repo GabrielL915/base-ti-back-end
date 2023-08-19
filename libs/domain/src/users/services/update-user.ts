@@ -8,7 +8,7 @@ import { UseCase } from '@app/domain/base/use-case';
 export class UpdateUserService implements UseCase<{ id: string, input: UpdateUserDto }, User> {
     constructor(private readonly userRepository: UserRepository) {}
     
-    async execute({ id, input }: { id: string, input: UpdateUserDto }): Promise<User> {
+    async execute({ id, input }: { id: string, input: UpdateUserDto }) {
         console.log('UpdateUserService.execute()');
         return this.userRepository.updateOne(id, input);
     }

@@ -1,31 +1,3 @@
-/* import { Module } from '@nestjs/common';
-import { UsersModule } from '@app/domain/users/users.module';
-import { KnexModule } from 'nest-knexjs';
-
-@Module({
-  imports: [
-    UsersModule,
-    KnexModule.forRoot({
-      config: {
-        client: 'postgres',
-        useNullAsDefault: true,
-        connection: {
-          host: 'localhost',
-          port: 5432,
-          user: 'pguser',
-          password: 'pgpassword',
-
-          database: 'nestjs',
-        },
-      },
-    }),
-  ],
-  controllers: [],
-  providers: [],
-})
-export class AppModule {}
- */
-
 import { Module } from '@nestjs/common';
 import { UsersModule } from '@app/domain/users/users.module';
 import { KnexModule } from 'nest-knexjs';
@@ -35,17 +7,27 @@ import { KnexModule } from 'nest-knexjs';
     UsersModule,
     KnexModule.forRoot({
       config: {
-        client: 'pg',
+        client: 'postgresql',
         useNullAsDefault: true,
+        connection: {
+          host: 'localhost',
+          port: 5432,
+          user: 'pguser',
+          password: 'pgpassword',
+          database: 'nestjs',
+        } /* 
         connection: {
           connectionString:
             '',
+          ssl: { rejectUnauthorized: false },
           host: '',
-          port: 6418,
+          port: 5432,
           user: '',
           database: '',
-          password: '',
+          password:
+            '',
         },
+ */,
       },
     }),
   ],

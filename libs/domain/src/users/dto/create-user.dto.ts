@@ -7,17 +7,17 @@ export class CreateUserDto {
         example: 'João da Silva',
         type: String,
     })
-    name: string;
+    nome: string;
     @ApiProperty({
         description: 'Email do usuário',
         example: 'exemplo@gmail.com',
         type: String,
     })
-    email: string;
+    cpf: string;
     @ApiProperty({
         description: 'Senha do usuário',
         example: '123456',
         type: String,
     })
-    password: string;
+    telefone: number;
 }

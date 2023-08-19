@@ -32,8 +32,8 @@ export class UsersController {
     return this.findAllUserUseCase.execute();
   }
 
-  @Patch(':id')
+  /* @Patch(':id')
   async update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto) {
     return this.updateUserUseCase.execute({ id, input: updateUserDto });
-}
+} */
 }
