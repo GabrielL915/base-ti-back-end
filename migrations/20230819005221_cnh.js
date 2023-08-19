@@ -7,7 +7,7 @@ exports.up = function (knex) {
     table.increments('id').primary();
     table.integer('id_entregador').unsigned();
     table.foreign('id_entregador').references('entregador.id');
-    table.specificType('categoria', 'string[]').notNullable();
+    table.specificType('categoria', 'text[]').notNullable();
     table.integer('registro').notNullable();
   });
 };

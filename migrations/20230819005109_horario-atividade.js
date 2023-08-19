@@ -7,7 +7,7 @@ exports.up = function (knex) {
     table.increments('id').primary();
     table.integer('id_entregador').unsigned();
     table.foreign('id_entregador').references('entregador.id');
-    table.specificType('horario_inicio', 'timestamp[]').notNullable();
+    table.specificType('horario_inicio', 'TIMESTAMP[]').notNullable();
   });
 };
 

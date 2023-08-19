@@ -7,7 +7,7 @@ exports.up = function (knex) {
     table.increments('id').primary();
     table.string('tipo', 30);
     table.timestamp('horario');
-    table.specificType('dias', 'string[]');
+    table.specificType('dias', 'text[]');
     table.integer('limite_rides_ignoradas');
     table.integer('limite_rides_recusadas');
     table.timestamp('tempo_de_tolerancia');
